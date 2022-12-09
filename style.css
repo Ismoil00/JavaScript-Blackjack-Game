@@ -1,0 +1,202 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Blackjack Game */
+
+.blackjackGame {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, rgb(234, 255, 234), rgb(145, 255, 117));
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.challengeSec {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.challengeSec h1 {
+  font-size: 1.5rem;
+}
+
+#messageDisplay {
+  font-size: 1.3rem;
+}
+
+.playGround {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right,
+      rgb(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0),
+      rgb(0, 0, 0, 0.7)),
+    darkgreen;
+  text-align: center;
+}
+
+.youAndDealerSec {
+  flex-basis: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#yourPlayGround,
+#dealerPlayGround {
+  flex-basis: 50%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+#yourPlayGround h3,
+#dealerPlayGround h3 {
+  padding: 10px 0;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#yourCardsFields,
+#dealerCardsFields {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cardsImg {
+  width: 100px;
+  box-shadow: 0px 0px 5px black;
+}
+
+
+
+.gameButtons {
+  flex-basis: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  border-bottom: 2px solid black;
+}
+
+.gameButtons button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+#hitBtn {
+  background-color: rgb(0, 119, 255);
+}
+
+#standBtn {
+  background-color: rgb(255, 187, 0);
+  color: black;
+  padding: 10px 15px;
+}
+
+#dealBtn {
+  background-color: rgb(255, 65, 65);
+}
+
+#hitBtn:active,
+#standBtn:active,
+#dealBtn:active,
+#clearTrack:active {
+  box-shadow: 0px 0px 3px black;
+}
+
+.winnerLoserDisplay {
+  padding: 10px;
+  display: grid;
+  place-content: center;
+}
+
+.winsLossesDraws,
+.windLossesDrawsCount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.winsLossesDraws {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.windLossesDrawsCount {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.windLossesDrawsCount {
+  border: 1px solid black;
+}
+
+.winsLossesDraws div,
+.windLossesDrawsCount div {
+  width: 60px;
+  text-align: center;
+}
+
+.winsLossesDraws div:first-child,
+.winsLossesDraws div:nth-child(2),
+.windLossesDrawsCount div:first-child,
+.windLossesDrawsCount div:nth-child(2) {
+  border-right: 1px solid black;
+}
+
+#clearTrack {
+  margin: 10px auto;
+  margin-bottom: 0;
+  width: 110px;
+  padding: 5px 10px;
+  border: none;
+  background-color: lightsalmon;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+  .cardsImg {
+    width: 50px;
+  }
+}

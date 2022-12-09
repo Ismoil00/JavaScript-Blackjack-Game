@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Blackjack Game -->
+    <article class="blackjackGame">
+      <!-- Message display section -->
+      <section class="challengeSec">
+        <h1>Challenge 5: Blackjack</h1>
+        <h3 id="messageDisplay">Let's Play</h3>
+      </section>
+      <!-- Playground Section -->
+      <section class="playGround">
+        <div class="youAndDealerSec">
+          <div id="yourPlayGround">
+            <h3>You: <span id="yourScore">0</span></h3>
+            <div id="yourCardsFields"></div>
+          </div>
+          <div id="dealerPlayGround">
+            <h3>Dealer: <span id="dealerScore">0</span></h3>
+            <div id="dealerCardsFields"></div>
+          </div>
+        </div>
+        <div class="gameButtons">
+          <button id="hitBtn">Hit</button>
+          <button id="standBtn">Stand</button>
+          <button id="dealBtn">Deal</button>
+        </div>
+      </section>
+      <!-- Score record Section -->
+      <section class="winnerLoserDisplay">
+        <div class="winsLossesDraws">
+          <div>Wins</div>
+          <div>Losses</div>
+          <div>Draws</div>
+        </div>
+        <div class="windLossesDrawsCount">
+          <div id="winsCount">0</div>
+          <div id="lossesCount">0</div>
+          <div id="drawsCount">0</div>
+        </div>
+        <button id="clearTrack">Clear Track</button>
+      </section>
+    </article>
+  </body>
+</html>
